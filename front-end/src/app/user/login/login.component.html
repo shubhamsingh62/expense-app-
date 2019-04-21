@@ -1,0 +1,22 @@
+<header>
+<div class="navbar">
+  <ul>
+    <li  routerLink="/signup">Signup</li>
+  </ul>
+</div>
+</header>
+<div class="container">
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" [(ngModel)]="email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="password" name="password" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" (click)="signinFunction()">Submit</button>
+      </form>
+</div>

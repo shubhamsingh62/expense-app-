@@ -1,0 +1,33 @@
+<header>
+  <div class="navbar">
+    <ul>
+      <li routerLink="/login">Login</li>
+    </ul>
+  </div>
+</header>
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">FirstName</label>
+      <input type="email" class="form-control" [(ngModel)]="firstName" id="firstName" name="firstName" aria-describedby="emailHelp" placeholder="Enter FirstName">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Lastname</label>
+      <input type="email" class="form-control" [(ngModel)]="lastName" id="lastName" name="lastName" aria-describedby="emailHelp" placeholder="Enter Lastname">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" [(ngModel)]="email" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">MobileNumber</label>
+      <input type="email" class="form-control" [(ngModel)]="mobileNumber" id="mobileNumber" name="mobileNumber" aria-describedby="emailHelp" placeholder="Enter MobileNumber">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" [(ngModel)]="password" id="password" name="password" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="signUpFunction()">Submit</button>
+  </form>
+</div>
+

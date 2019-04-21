@@ -1,0 +1,60 @@
+<header>
+    <div class="navbar">
+        <div class="btn btn-primary"  (click)="logout()">Logout</div>
+    </div>
+ </header>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+        <div class="form-group">
+          <label for="exampleInputPassword1">Name</label>
+          <input type="text" class="form-control" [(ngModel)]="name" name="exname" id="exampleInputPassword1" placeholder="expence name">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword2">Price</label>
+              <input type="text" class="form-control" [(ngModel)]="price" name="price" id="exampleInputPassword2" placeholder="price">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword3">Category</label>
+              <input type="text" class="form-control" [(ngModel)]="category" name="category" id="exampleInputPassword3" placeholder="category">
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword3">File Upload</label>
+              <input type="file" class="form-control"  name="fileUpload"  id="fileUpload" multiple ng2FileSelect [uploader]="uploader" >
+          </div>
+          <div class="row" *ngFor="let item of uploader.queue">
+            <div class="col-6">
+                {{item.file.name}}
+            </div>
+            <div class="col-6">
+              <button type="button" class="btn btn-dark" (click)="item.upload()" >Upload</button>
+              <button type="button" class="btn btn-danger" (click)="item.remove()">Cancle</button>
+            </div>
+
+          </div>
+        
+          <div class="btn btn-primary" (click)="createdexpences()">Submit</div>          
+    </div>
+  </div>
+  <div class="row" style="padding-top:25px;">
+      <div class="col-12">
+    <h5>Detail List</h5>
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Emp name</th>
+                  <th scope="col">Expences</th>
+                  <th scope="col">category</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let all of alldata">
+                  <td scope="row">{{all.name}}</td>
+                  <td>{{all.price}}</td>
+                  <td>{{all.category}}</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
+</div>

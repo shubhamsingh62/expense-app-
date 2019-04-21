@@ -1,0 +1,22 @@
+header{
+    margin: 0%;
+}
+.navbar{
+    padding:1%;
+    background-color: black;
+    color: white;
+    /* display: flex; */
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline;
+    padding-left: 35%;
+    cursor: pointer;
+}
+form{
+    width: 60%;
+    margin-left: 15%;
+    margin-top:10%;
+}
